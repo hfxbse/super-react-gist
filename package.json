@@ -1,9 +1,18 @@
 {
   "name": "@hfxbse/super-react-gist",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Simple and flexible component that allows you to embed GitHub Gists in React projects.",
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "main": "src/index.jsx",
+  "module": "dist/super-react-gist.mjs",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/super-react-gist.mjs",
+      "require": "./dist/super-react-gist.umd.js"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hfxbse/super-react-gist.git"
@@ -32,12 +41,11 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "dompurify": "^2.3.6",
-    "react": ">=16.14.0",
-    "react-dom": ">=16.14.0"
+    "dompurify": "^2.3.6"
   },
   "peerDependencies": {
-    "react": ">=16.14.0"
+    "react": ">=16.14.0",
+    "react-dom": ">=16.14.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^8.1.10",
@@ -49,6 +57,7 @@
     "vite": "^5.3.1"
   },
   "scripts": {
-    "start": "storybook dev -p 3000"
+    "start": "storybook dev -p 3000",
+    "build": "vite build"
   }
 }

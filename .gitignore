@@ -9,3 +9,6 @@ npm-debug.log*
 /dist
 *storybook.log
 /storybook-static
+
+# NPM tar balls
+*.tgz
