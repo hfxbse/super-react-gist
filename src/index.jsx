@@ -67,7 +67,6 @@ const Gist = ({
     setGistError(true)
     setGistIsFetching(false)
     onError?.()
-    return
   }
 
   React.useEffect(() => {
