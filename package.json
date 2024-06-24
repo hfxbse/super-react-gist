@@ -41,5 +41,17 @@
   },
   "peerDependencies": {
     "react": ">=16.14.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.1.10",
+    "@storybook/blocks": "^8.1.10",
+    "@storybook/react": "^8.1.10",
+    "@storybook/react-vite": "^8.1.10",
+    "prop-types": "^15.8.1",
+    "storybook": "^8.1.10",
+    "vite": "^5.3.1"
+  },
+  "scripts": {
+    "start": "storybook dev -p 3000"
   }
 }
