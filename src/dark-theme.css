@@ -1,0 +1,387 @@
+[data-color-mode="dark"][data-dark-theme="dark"],
+[data-color-mode="dark"][data-dark-theme="dark"] ::backdrop {
+  --color-canvas-default-transparent: rgba(13, 17, 23, 0);
+  --color-prettylights-syntax-comment: #8b949e;
+  --color-prettylights-syntax-constant: #79c0ff;
+  --color-prettylights-syntax-entity: #d2a8ff;
+  --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+  --color-prettylights-syntax-entity-tag: #7ee787;
+  --color-prettylights-syntax-keyword: #ff7b72;
+  --color-prettylights-syntax-string: #a5d6ff;
+  --color-prettylights-syntax-variable: #ffa657;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+  --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+  --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+  --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+  --color-prettylights-syntax-carriage-return-bg: #b62324;
+  --color-prettylights-syntax-string-regexp: #7ee787;
+  --color-prettylights-syntax-markup-list: #f2cc60;
+  --color-prettylights-syntax-markup-heading: #1f6feb;
+  --color-prettylights-syntax-markup-italic: #c9d1d9;
+  --color-prettylights-syntax-markup-bold: #c9d1d9;
+  --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+  --color-prettylights-syntax-markup-deleted-bg: #67060c;
+  --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+  --color-prettylights-syntax-markup-inserted-bg: #033a16;
+  --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+  --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+  --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+  --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+  --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+  --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+  --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+  --color-fg-default: #e6edf3;
+  --color-fg-muted: #848d97;
+  --color-fg-subtle: #6e7681;
+  --color-fg-on-emphasis: #ffffff;
+  --color-canvas-default: #0d1117;
+  --color-canvas-inset: #010409;
+  --color-canvas-subtle: #161b22;
+  --color-border-default: #30363d;
+  --color-border-muted: #21262d;
+  --color-border-subtle: rgba(240, 246, 252, 0.1);
+
+
+  .gist-file, .gist-meta {
+    background: var(--color-canvas-subtle) !important;
+    border-color: var(--color-border-default) !important;
+  }
+
+  .gist-data {
+    border-color: var(--color-border-default) !important;
+  }
+
+  .pl-c /*comment, punctuation.definition.comment, string.comment */
+  {
+    color: var(--color-prettylights-syntax-comment) !important;
+  }
+
+  .pl-c1 /* constant, entity.name.constant, variable.other.constant, variable.language, support, meta.property-name, support.constant, support.variable, meta.module-reference, markup.raw, meta.diff.header, meta.output */,
+  .pl-s .pl-v /* string variable */
+  {
+    color: var(--color-prettylights-syntax-constant) !important;
+  }
+
+  .pl-e /* entity */,
+  .pl-en /* entity.name */
+  {
+    color: var(--color-prettylights-syntax-entity) !important;
+  }
+
+  .pl-smi /* variable.parameter.function, storage.modifier.package, storage.modifier.import, storage.type.java, variable.other */,
+  .pl-s .pl-s1 /* string source */
+  {
+    color: var(--color-prettylights-syntax-storage-modifier-import) !important;
+  }
+
+  .pl-ent /* entity.name.tag, markup.quote */
+  {
+    color: var(--color-prettylights-syntax-entity-tag) !important;
+  }
+
+  .pl-k /* keyword, storage, storage.type */
+  {
+    color: var(--color-prettylights-syntax-keyword) !important;
+  }
+
+  .pl-s /* string */,
+  .pl-pds /* punctuation.definition.string, source.regexp, string.regexp.character-class */,
+  .pl-s .pl-pse .pl-s1 /* string punctuation.section.embedded source */,
+  .pl-sr /* string.regexp */,
+  .pl-sr .pl-cce /* string.regexp constant.character.escape */,
+  .pl-sr .pl-sre /* string.regexp source.ruby.embedded */,
+  .pl-sr .pl-sra /* string.regexp string.regexp.arbitrary-repetition */
+  {
+    color: var(--color-prettylights-syntax-string) !important;
+  }
+
+  .pl-v /* variable */,
+  .pl-smw /* sublimelinter.mark.warning */
+  {
+    color: var(--color-prettylights-syntax-variable) !important;
+  }
+
+  .pl-bu /* invalid.broken, invalid.deprecated, invalid.unimplemented, message.error, brackethighlighter.unmatched, sublimelinter.mark.error */
+  {
+    color: var(--color-prettylights-syntax-brackethighlighter-unmatched) !important;
+  }
+
+  .pl-ii /* invalid.illegal */
+  {
+    color: var(--color-prettylights-syntax-invalid-illegal-text) !important;
+    background-color: var(--color-prettylights-syntax-invalid-illegal-bg) !important;
+  }
+
+  .pl-c2 /* carriage-return */
+  {
+    color: var(--color-prettylights-syntax-carriage-return-text) !important;
+    background-color: var(--color-prettylights-syntax-carriage-return-bg) !important;
+  }
+
+  .pl-sr .pl-cce /* string.regexp constant.character.escape */
+  {
+    color: var(--color-prettylights-syntax-string-regexp) !important;
+  }
+
+  .pl-ml /* markup.list */
+  {
+    color: var(--color-prettylights-syntax-markup-list) !important;
+  }
+
+  .pl-mh /* markup.heading */,
+  .pl-mh .pl-en /* markup.heading entity.name */,
+  .pl-ms /* meta.separator */
+  {
+    color: var(--color-prettylights-syntax-markup-heading) !important;
+  }
+
+  .pl-mi /* markup.italic */
+  {
+    color: var(--color-prettylights-syntax-markup-italic) !important;
+  }
+
+  .pl-mb /* markup.bold */
+  {
+    color: var(--color-prettylights-syntax-markup-bold) !important;
+  }
+
+  .pl-md /* markup.deleted, meta.diff.header.from-file, punctuation.definition.deleted */
+  {
+    color: var(--color-prettylights-syntax-markup-deleted-text) !important;
+    background-color: var(--color-prettylights-syntax-markup-deleted-bg) !important;
+  }
+
+  .pl-mi1 /* markup.inserted, meta.diff.header.to-file, punctuation.definition.inserted */
+  {
+    color: var(--color-prettylights-syntax-markup-inserted-text) !important;
+    background-color: var(--color-prettylights-syntax-markup-inserted-bg) !important;
+  }
+
+  .pl-mc /* markup.changed, punctuation.definition.changed */
+  {
+    color: var(--color-prettylights-syntax-markup-changed-text) !important;
+    background-color: var(--color-prettylights-syntax-markup-changed-bg) !important;
+  }
+
+  .pl-mi2 /* markup.ignored, markup.untracked */
+  {
+    color: var(--color-prettylights-syntax-markup-ignored-text) !important;
+    background-color: var(--color-prettylights-syntax-markup-ignored-bg) !important;
+  }
+
+  .pl-mdr /* meta.diff.range */
+  {
+    color: var(--color-prettylights-syntax-meta-diff-range) !important;
+  }
+
+  .pl-ba /* brackethighlighter.tag, brackethighlighter.curly, brackethighlighter.round, brackethighlighter.square, brackethighlighter.angle, brackethighlighter.quote */
+  {
+    color: var(--color-prettylights-syntax-brackethighlighter-angle) !important;
+  }
+
+  .pl-sg /* sublimelinter.gutter-mark */
+  {
+    color: var(--color-prettylights-syntax-sublimelinter-gutter-mark) !important;
+  }
+
+  .pl-corl /* constant.other.reference.link, string.other.link */
+  {
+    color: var(--color-prettylights-syntax-constant-other-reference-link) !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-color-mode="auto"][data-dark-theme="dark"],
+  [data-color-mode="auto"][data-dark-theme="dark"] ::backdrop {
+    --color-canvas-default-transparent: rgba(13, 17, 23, 0);
+    --color-prettylights-syntax-comment: #8b949e;
+    --color-prettylights-syntax-constant: #79c0ff;
+    --color-prettylights-syntax-entity: #d2a8ff;
+    --color-prettylights-syntax-storage-modifier-import: #c9d1d9;
+    --color-prettylights-syntax-entity-tag: #7ee787;
+    --color-prettylights-syntax-keyword: #ff7b72;
+    --color-prettylights-syntax-string: #a5d6ff;
+    --color-prettylights-syntax-variable: #ffa657;
+    --color-prettylights-syntax-brackethighlighter-unmatched: #f85149;
+    --color-prettylights-syntax-invalid-illegal-text: #f0f6fc;
+    --color-prettylights-syntax-invalid-illegal-bg: #8e1519;
+    --color-prettylights-syntax-carriage-return-text: #f0f6fc;
+    --color-prettylights-syntax-carriage-return-bg: #b62324;
+    --color-prettylights-syntax-string-regexp: #7ee787;
+    --color-prettylights-syntax-markup-list: #f2cc60;
+    --color-prettylights-syntax-markup-heading: #1f6feb;
+    --color-prettylights-syntax-markup-italic: #c9d1d9;
+    --color-prettylights-syntax-markup-bold: #c9d1d9;
+    --color-prettylights-syntax-markup-deleted-text: #ffdcd7;
+    --color-prettylights-syntax-markup-deleted-bg: #67060c;
+    --color-prettylights-syntax-markup-inserted-text: #aff5b4;
+    --color-prettylights-syntax-markup-inserted-bg: #033a16;
+    --color-prettylights-syntax-markup-changed-text: #ffdfb6;
+    --color-prettylights-syntax-markup-changed-bg: #5a1e02;
+    --color-prettylights-syntax-markup-ignored-text: #c9d1d9;
+    --color-prettylights-syntax-markup-ignored-bg: #1158c7;
+    --color-prettylights-syntax-meta-diff-range: #d2a8ff;
+    --color-prettylights-syntax-brackethighlighter-angle: #8b949e;
+    --color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
+    --color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
+    --color-fg-default: #e6edf3;
+    --color-fg-muted: #848d97;
+    --color-fg-subtle: #6e7681;
+    --color-fg-on-emphasis: #ffffff;
+    --color-canvas-default: #0d1117;
+    --color-canvas-inset: #010409;
+    --color-canvas-subtle: #161b22;
+    --color-border-default: #30363d;
+    --color-border-muted: #21262d;
+    --color-border-subtle: rgba(240, 246, 252, 0.1);
+
+
+    .gist-file, .gist-meta {
+      background: var(--color-canvas-subtle) !important;
+      border-color: var(--color-border-default) !important;
+    }
+
+    .gist-data {
+      border-color: var(--color-border-default) !important;
+    }
+
+    .pl-c /*comment, punctuation.definition.comment, string.comment */
+    {
+      color: var(--color-prettylights-syntax-comment) !important;
+    }
+
+    .pl-c1 /* constant, entity.name.constant, variable.other.constant, variable.language, support, meta.property-name, support.constant, support.variable, meta.module-reference, markup.raw, meta.diff.header, meta.output */,
+    .pl-s .pl-v /* string variable */
+    {
+      color: var(--color-prettylights-syntax-constant) !important;
+    }
+
+    .pl-e /* entity */,
+    .pl-en /* entity.name */
+    {
+      color: var(--color-prettylights-syntax-entity) !important;
+    }
+
+    .pl-smi /* variable.parameter.function, storage.modifier.package, storage.modifier.import, storage.type.java, variable.other */,
+    .pl-s .pl-s1 /* string source */
+    {
+      color: var(--color-prettylights-syntax-storage-modifier-import) !important;
+    }
+
+    .pl-ent /* entity.name.tag, markup.quote */
+    {
+      color: var(--color-prettylights-syntax-entity-tag) !important;
+    }
+
+    .pl-k /* keyword, storage, storage.type */
+    {
+      color: var(--color-prettylights-syntax-keyword) !important;
+    }
+
+    .pl-s /* string */,
+    .pl-pds /* punctuation.definition.string, source.regexp, string.regexp.character-class */,
+    .pl-s .pl-pse .pl-s1 /* string punctuation.section.embedded source */,
+    .pl-sr /* string.regexp */,
+    .pl-sr .pl-cce /* string.regexp constant.character.escape */,
+    .pl-sr .pl-sre /* string.regexp source.ruby.embedded */,
+    .pl-sr .pl-sra /* string.regexp string.regexp.arbitrary-repetition */
+    {
+      color: var(--color-prettylights-syntax-string) !important;
+    }
+
+    .pl-v /* variable */,
+    .pl-smw /* sublimelinter.mark.warning */
+    {
+      color: var(--color-prettylights-syntax-variable) !important;
+    }
+
+    .pl-bu /* invalid.broken, invalid.deprecated, invalid.unimplemented, message.error, brackethighlighter.unmatched, sublimelinter.mark.error */
+    {
+      color: var(--color-prettylights-syntax-brackethighlighter-unmatched) !important;
+    }
+
+    .pl-ii /* invalid.illegal */
+    {
+      color: var(--color-prettylights-syntax-invalid-illegal-text) !important;
+      background-color: var(--color-prettylights-syntax-invalid-illegal-bg) !important;
+    }
+
+    .pl-c2 /* carriage-return */
+    {
+      color: var(--color-prettylights-syntax-carriage-return-text) !important;
+      background-color: var(--color-prettylights-syntax-carriage-return-bg) !important;
+    }
+
+    .pl-sr .pl-cce /* string.regexp constant.character.escape */
+    {
+      color: var(--color-prettylights-syntax-string-regexp) !important;
+    }
+
+    .pl-ml /* markup.list */
+    {
+      color: var(--color-prettylights-syntax-markup-list) !important;
+    }
+
+    .pl-mh /* markup.heading */,
+    .pl-mh .pl-en /* markup.heading entity.name */,
+    .pl-ms /* meta.separator */
+    {
+      color: var(--color-prettylights-syntax-markup-heading) !important;
+    }
+
+    .pl-mi /* markup.italic */
+    {
+      color: var(--color-prettylights-syntax-markup-italic) !important;
+    }
+
+    .pl-mb /* markup.bold */
+    {
+      color: var(--color-prettylights-syntax-markup-bold) !important;
+    }
+
+    .pl-md /* markup.deleted, meta.diff.header.from-file, punctuation.definition.deleted */
+    {
+      color: var(--color-prettylights-syntax-markup-deleted-text) !important;
+      background-color: var(--color-prettylights-syntax-markup-deleted-bg) !important;
+    }
+
+    .pl-mi1 /* markup.inserted, meta.diff.header.to-file, punctuation.definition.inserted */
+    {
+      color: var(--color-prettylights-syntax-markup-inserted-text) !important;
+      background-color: var(--color-prettylights-syntax-markup-inserted-bg) !important;
+    }
+
+    .pl-mc /* markup.changed, punctuation.definition.changed */
+    {
+      color: var(--color-prettylights-syntax-markup-changed-text) !important;
+      background-color: var(--color-prettylights-syntax-markup-changed-bg) !important;
+    }
+
+    .pl-mi2 /* markup.ignored, markup.untracked */
+    {
+      color: var(--color-prettylights-syntax-markup-ignored-text) !important;
+      background-color: var(--color-prettylights-syntax-markup-ignored-bg) !important;
+    }
+
+    .pl-mdr /* meta.diff.range */
+    {
+      color: var(--color-prettylights-syntax-meta-diff-range) !important;
+    }
+
+    .pl-ba /* brackethighlighter.tag, brackethighlighter.curly, brackethighlighter.round, brackethighlighter.square, brackethighlighter.angle, brackethighlighter.quote */
+    {
+      color: var(--color-prettylights-syntax-brackethighlighter-angle) !important;
+    }
+
+    .pl-sg /* sublimelinter.gutter-mark */
+    {
+      color: var(--color-prettylights-syntax-sublimelinter-gutter-mark) !important;
+    }
+
+    .pl-corl /* constant.other.reference.link, string.other.link */
+    {
+      color: var(--color-prettylights-syntax-constant-other-reference-link) !important;
+    }
+  }
+}
