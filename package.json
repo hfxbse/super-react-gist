@@ -15,7 +15,8 @@
     ".": {
       "import": "./es/index.js",
       "require": "./lib/index.js"
-    }
+    },
+    "./styles": "./style.css"
   },
   "repository": {
     "type": "git",
