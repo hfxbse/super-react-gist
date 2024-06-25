@@ -1,17 +1,17 @@
 {
-  "name": "super-react-gist",
+  "name": "@hfxbse/super-react-gist",
   "version": "1.1.1",
   "description": "Simple and flexible component that allows you to embed GitHub Gists in React projects.",
   "main": "lib/index.js",
   "module": "es/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/georgegkas/super-react-gist.git"
+    "url": "git+https://github.com/hfxbse/super-react-gist.git"
   },
   "bugs": {
-    "url": "https://github.com/georgegkas/super-react-gist/issues"
+    "url": "https://github.com/hfxbse/super-react-gist/issues"
   },
-  "homepage": "https://github.com/georgegkas/super-react-gist",
+  "homepage": "https://github.com/hfxbse/super-react-gist",
   "keywords": [
     "react",
     "react-component",
@@ -23,14 +23,11 @@
   ],
   "readmeFilename": "README.md",
   "author": {
-    "name": "George Gkasdrogkas",
-    "email": "georgegkas@gmail.com",
-    "url": "https://georgegkas.com/"
+    "name": "Fabian Haas"
   },
   "maintainers": [
     {
-      "name": "George Gkasdrogkas",
-      "email": "georgegkas@gmail.com"
+      "name": "Fabian Haas"
     }
   ],
   "license": "MIT",
