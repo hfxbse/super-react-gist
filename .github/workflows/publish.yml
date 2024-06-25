@@ -4,6 +4,12 @@ on:
   push:
     branches:
       - master
+    paths:
+      - src/**
+      - .storybook/**
+      - package.json
+      - package-lock.json
+      - vite.config.js
 
 jobs:
   publish-storybook:

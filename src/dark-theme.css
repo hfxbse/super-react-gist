@@ -193,7 +193,11 @@
 
 @media (prefers-color-scheme: dark) {
   [data-color-mode="auto"][data-dark-theme="dark"],
-  [data-color-mode="auto"][data-dark-theme="dark"] ::backdrop {
+  [data-color-mode="auto"][data-dark-theme="dark"][data-light-theme="light"] /* override default theme */,
+  [data-color-mode="auto"][data-dark-theme="dark"] ::backdrop,
+  [data-color-mode="auto"][data-dark-theme="dark"][data-light-theme="light"] ::backdrop /* override default theme */ {
+    --bgColor-default: unset;
+    --fgColor-default: unset;
     --color-canvas-default-transparent: rgba(13, 17, 23, 0);
     --color-prettylights-syntax-comment: #8b949e;
     --color-prettylights-syntax-constant: #79c0ff;
