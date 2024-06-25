@@ -1,0 +1,21 @@
+name: publish
+run-name: "Publish Storybook"
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish-storybook:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
+    steps:
+      - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
+        name: "publish storybook"
+        with:
+          path: storybook-static
