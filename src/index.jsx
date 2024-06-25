@@ -1,5 +1,7 @@
 import React from 'react'
 import dompurify from 'dompurify';
+import './dark-theme.css'
+
 const sanitize = dompurify.sanitize
 
 const Gist = ({
@@ -8,7 +10,8 @@ const Gist = ({
   LoadingComponent,
   ErrorComponent,
   onError,
-  onLoad
+  onLoad,
+  colorMode = 'light'
 }) => {
   const [gistContent, setGistContent] = React.useState('')
   const [gistIsFetching, setGistIsFetching] = React.useState(true)
@@ -71,7 +74,7 @@ const Gist = ({
 
   React.useEffect(() => {
     const currentGistCallback = 'embed_gist_callback_' + getNextGistId()
-    
+
     window[currentGistCallback] = (gist) => {
       addGistStylesheetIfNotExist(gist.stylesheet)
       setGistContent(gist.div)
@@ -92,17 +95,25 @@ const Gist = ({
     document.head.appendChild(gistScript)
   }, [])
 
+  const themingRef = React.useCallback(gist => {
+    gist.querySelectorAll("[data-light-theme]").forEach((element) => {
+      element.setAttribute('data-dark-theme', 'dark')
+    })
+
+    gist.querySelectorAll("[data-color-mode]").forEach((element) => {
+      element.setAttribute('data-color-mode', colorMode)
+    })
+  }, [])
+
   if (gistIsFetching && LoadingComponent) {
-    return <LoadingComponent />
+    return <LoadingComponent/>
   }
 
   if (gistError && ErrorComponent) {
-    return <ErrorComponent />
+    return <ErrorComponent/>
   }
 
-  return (
-    <div dangerouslySetInnerHTML={{ __html: sanitize(gistContent) }}/>
-  )
+  return <div dangerouslySetInnerHTML={{__html: sanitize(gistContent)}} ref={themingRef}/>
 }
 
 Gist.currentGistCallbackId = 0
