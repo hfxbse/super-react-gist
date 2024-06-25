@@ -1,17 +1,15 @@
 {
   "name": "@hfxbse/super-react-gist",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Simple and flexible component that allows you to embed GitHub Gists in React projects.",
   "main": "src/index.jsx",
   "module": "dist/super-react-gist.mjs",
-  "files": [
-    "dist"
-  ],
   "exports": {
     ".": {
       "import": "./dist/super-react-gist.mjs",
       "require": "./dist/super-react-gist.umd.js"
-    }
+    },
+    "./styles": "./dist/style.css"
   },
   "repository": {
     "type": "git",
