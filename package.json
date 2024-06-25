@@ -58,6 +58,7 @@
   },
   "scripts": {
     "start": "storybook dev -p 3000",
-    "build": "vite build"
+    "build": "vite build",
+    "build-storybook": "storybook build"
   }
 }
