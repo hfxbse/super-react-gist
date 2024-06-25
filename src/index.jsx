@@ -95,17 +95,38 @@ const Gist = ({
     document.head.appendChild(gistScript)
   }, [])
 
-  const themingRef = React.useCallback(gist => {
+  const applyTheme = (gist) => {
     gist.classList.add(styles.gist)
 
-    gist.querySelectorAll("[data-light-theme]").forEach((element) => {
+    const themable = gist.querySelectorAll("[data-color-mode]");
+
+    themable.forEach((element) => {
       element.setAttribute('data-dark-theme', 'dark')
     })
 
-    gist.querySelectorAll("[data-color-mode]").forEach((element) => {
+    themable.forEach((element) => {
       element.setAttribute('data-color-mode', colorMode)
     })
+  }
+
+
+  const gist = React.useRef(null)
+  const changeListener = () => {
+    if (gist.current) applyTheme(gist.current)
+  }
+
+  const themingCallback = React.useCallback((node) => {
+    applyTheme(node)
+
+    new MutationObserver(changeListener).observe(node, {
+      subtree: true,
+      childList: true
+    })
+
+    gist.current = node
   }, [])
+
+  React.useEffect(changeListener, [colorMode])
 
   if (gistIsFetching && LoadingComponent) {
     return <LoadingComponent/>
@@ -115,7 +136,7 @@ const Gist = ({
     return <ErrorComponent/>
   }
 
-  return <div dangerouslySetInnerHTML={{__html: sanitize(gistContent)}} ref={themingRef}/>
+  return <div dangerouslySetInnerHTML={{__html: sanitize(gistContent)}} ref={themingCallback}/>
 }
 
 Gist.currentGistCallbackId = 0
