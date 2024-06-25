@@ -25,10 +25,7 @@ jobs:
           scope: '@hfxbse'
 
       - run: "npm ci"
-        name: "Install locked project dependencies"
-
-      - run: "npm run build"
-        name: "Build project"
+        name: "Install dependencies and build package"
 
       - run: "npm publish"
         name: "Publish package"

@@ -4,6 +4,11 @@
   "description": "Simple and flexible component that allows you to embed GitHub Gists in React projects.",
   "main": "src/index.jsx",
   "module": "dist/super-react-gist.mjs",
+  "files": [
+    "dist",
+    "src/*.css",
+    "src/*.(?!stories).jsx"
+  ],
   "exports": {
     ".": {
       "import": "./dist/super-react-gist.mjs",
@@ -55,6 +60,7 @@
     "vite": "^5.3.1"
   },
   "scripts": {
+    "prepare": "vite build",
     "start": "storybook dev -p 3000",
     "build": "vite build",
     "build-storybook": "storybook build"
