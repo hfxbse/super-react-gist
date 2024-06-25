@@ -13,8 +13,8 @@ export default {
       control: 'text',
     },
     colorMode: {
-      control: 'radio',
-      options: ['light', 'dark']
+      control: 'inline-radio',
+      options: ['light', 'dark', 'auto']
     }
   },
   args: {
@@ -65,5 +65,12 @@ export const ColorModeDark = {
   args: {
     url: 'https://gist.github.com/GeorgeGkas/5f55a83909a3f5b766934ffe802d30df#file-start-js',
     colorMode: 'dark'
+  }
+}
+
+export const ColorModeAuto = {
+  args: {
+    url: 'https://gist.github.com/GeorgeGkas/5f55a83909a3f5b766934ffe802d30df#file-start-js',
+    colorMode: 'auto'
   }
 }

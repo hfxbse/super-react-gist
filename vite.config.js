@@ -3,6 +3,8 @@ import * as fs from "node:fs";
 import {resolve} from "path";
 import {defineConfig} from "vite";
 
+packageDefinition.name = "super-react-gist"
+
 export default defineConfig({
   build: {
     outDir: '.',
