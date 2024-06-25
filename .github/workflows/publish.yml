@@ -1,0 +1,36 @@
+name: publish
+run-name: "Publish NPM package"
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v4
+        name: "Checkout repository"
+
+      - uses: actions/setup-node@v4
+        name: "Configure Node.js"
+        with:
+          node-version: '20.x'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@hfxbse'
+
+      - run: "npm ci"
+        name: "Install locked project dependencies"
+
+      - run: "npm run build"
+        name: "Build project"
+
+      - run: "npm publish"
+        name: "Publish package"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
