@@ -9,7 +9,13 @@ export default {
   },
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
-    url: {control: 'text'},
+    url: {
+      control: 'text',
+    },
+    colorMode: {
+      control: 'radio',
+      options: ['light', 'dark']
+    }
   },
   args: {
     LoadingComponent: () => <strong>Custom loading component...</strong>
@@ -52,5 +58,12 @@ export const CustomErrorComponent = {
   args: {
     url: 'https://gist.github.com/GeorgeGkas/5f55a83909a3f5b7tyjty66934ffedd802d30df#file-multiple-js',
     ErrorComponent: () => <strong>Gist failed to load.</strong>
+  }
+}
+
+export const ColorModeDark = {
+  args: {
+    url: 'https://gist.github.com/GeorgeGkas/5f55a83909a3f5b766934ffe802d30df#file-start-js',
+    colorMode: 'dark'
   }
 }
