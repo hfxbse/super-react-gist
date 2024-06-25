@@ -1,6 +1,6 @@
 import React from 'react'
 import dompurify from 'dompurify';
-import './dark-theme.css'
+import styles from './dark-theme.module.css'
 
 const sanitize = dompurify.sanitize
 
@@ -96,6 +96,8 @@ const Gist = ({
   }, [])
 
   const themingRef = React.useCallback(gist => {
+    gist.classList.add(styles.gist)
+
     gist.querySelectorAll("[data-light-theme]").forEach((element) => {
       element.setAttribute('data-dark-theme', 'dark')
     })
