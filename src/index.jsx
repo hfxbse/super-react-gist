@@ -116,6 +116,8 @@ const Gist = ({
   }
 
   const themingCallback = React.useCallback((node) => {
+    if (!node) return
+
     applyTheme(node)
 
     new MutationObserver(changeListener).observe(node, {
