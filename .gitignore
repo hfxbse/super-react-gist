@@ -5,3 +5,10 @@
 /node_modules
 /umd
 npm-debug.log*
+/.idea
+/dist
+*storybook.log
+/storybook-static
+
+# NPM tar balls
+*.tgz

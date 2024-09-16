@@ -1,0 +1,52 @@
+import {Canvas, Meta} from '@storybook/blocks';
+
+import * as GistStories from './index.stories';
+
+<Meta of={GistStories}/>
+
+# [super-react-gist](https://github.com/GeorgeGkas/super-react-gist)
+
+Simple and flexible component that allows you to embed [GitHub Gists](https://gist.github.com/) in
+[React](https://reactjs.org) projects.
+This demo illustrates a basic usage of **super-react-app** component.
+
+## Render one file
+With **super-react-app** you are able to render a single file from a gist repository.
+
+<Canvas of={GistStories.SingleFile}/>
+
+## Render multiple files
+You are not restricted to using only one **super-react-app** component in your project.
+
+<Canvas of={GistStories.MultipleFiles}/>
+
+## Render using `file` prop
+
+Works both on **public** and **secret** gists.
+Oh snap! *face-palm*!
+In case you didn't notice we can only use the above method to render files that do not contain any uppercase letter.
+For instance, if our Gist repo contains a file `CaMelCase.js`, then providing just the permalink will not work!
+
+**Q**: How can we render this `CaMelCase.js` file?
+
+**A**: By providing a `file` prop to our `Gist` component to indicate which file we want to include.
+
+This is how we do it:
+
+<Canvas of={GistStories.CamelCaseFileName}/>
+
+## Render the whole Gist
+
+Of course, we can also embed the whole Gist repository just by copying the Gist URL.
+
+<Canvas of={GistStories.WholeGist}/>
+
+## Error Component
+
+Render a custom error component if Gist could not be retrieved.
+
+<Canvas of={GistStories.CustomErrorComponent}/>
+
+## Combine all the above techniques
+
+*This example is left as an exercise to the reader.*

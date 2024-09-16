@@ -38,14 +38,14 @@ To get started add the following script tag in your html file:
 
 ## Component Properties
 
-| Name | Type | Required | Description |
-| :--- | :--- | :---: | :--- |
-| `url` | *string* |✅ | The URL of the Gist repository or the permalink of an individual gist file. |
-| `file` | *string* | | Optional filename to include. |
-| `onLoad` | *function* | | Optional callback triggered on Gist load. |
-| `onError` | *function* | | Optional callback triggered on fetch error. |
-| `LoadingComponent` | *Component* | | Optional React component to render on Gist loading. |
-| `ErrorComponent` | *Component* || Optional React component to render if Gist fetch fails. |
+| Name               | Type        | Required | Description                                                                 |
+|:-------------------|:------------|:--------:|:----------------------------------------------------------------------------|
+| `url`              | *string*    |    ✅     | The URL of the Gist repository or the permalink of an individual gist file. |
+| `file`             | *string*    |          | Optional filename to include.                                               |
+| `onLoad`           | *function*  |          | Optional callback triggered on Gist load.                                   |
+| `onError`          | *function*  |          | Optional callback triggered on fetch error.                                 |
+| `LoadingComponent` | *Component* |          | Optional React component to render on Gist loading.                         |
+| `ErrorComponent`   | *Component* |          | Optional React component to render if Gist fetch fails.                     |
 
 ## Examples
 The following examples illustrate some basic features of the **super-react-gist** library.
